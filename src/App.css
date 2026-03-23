@@ -1,0 +1,102 @@
+#center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Product Card & Spacing */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px; /* This creates the "empty line" between products */
+  width: 100%;
+  max-width: 400px;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 15px;
+}
+
+.price {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all 0.2s;
+}
+
+.add-btn, .checkout-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.add-btn:hover, .checkout-btn:hover {
+  opacity: 0.8;
+}
+
+/* Cart Specifics */
+.cart-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.cart-item {
+  margin-bottom: 24px;
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.qty-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-btn {
+  background: transparent;
+  border: 1px solid #ff4444;
+  color: #ff4444;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Checkout Form */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 100px;
+}
+
+.checkout-form input, .checkout-form textarea {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
