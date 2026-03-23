@@ -1,51 +1,92 @@
-.home-nav {
-  font-family: var(--mono);
-  font-size: 14px;
-  margin-bottom: 40px;
+/* 1. Global Reset to occupy whole page */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Vertical Spacing for the Bare Minimum look */
-.product-card {
+* {
+  box-sizing: inherit;
+}
+
+/* 2. Full Width Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0; /* Vertical padding only */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.home-nav {
+  text-align: center;
+  font-family: monospace;
+  font-size: 14px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.nav-home-btn {
   border: 1px solid #000;
+  padding: 4px 10px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 3. Product Grid that fills the width */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  padding: 0 40px;
+}
+
+.product-card {
+  border: 0;
   padding: 20px;
-  margin-bottom: 40px; /* Space between product cards */
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .product-card img {
-  width: 100%;
+  width: 100%; /* Occupation of the full card width */
+  max-width: 400px;
   height: auto;
-  border-bottom: 1px solid #000;
   margin-bottom: 15px;
 }
 
 .price-tag {
-  font-family: var(--mono);
+  font-family: monospace;
   font-weight: bold;
+  margin: 10px 0;
 }
 
-/* Buttons: No rounded corners, just solid borders */
 button {
   background: transparent;
   border: 1px solid #000;
   padding: 10px 20px;
   cursor: pointer;
-  font-family: var(--mono);
+  font-family: monospace;
   font-weight: bold;
 }
 
-button:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* Cart & Form centering */
+/* 4. Cart & Form Centering */
 .cart-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto 10px;
 }
 
@@ -54,19 +95,18 @@ button:hover {
   font-size: 18px;
 }
 
-.brutalist-form {
+.form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto 60px;
 }
 
-.brutalist-form input,
-.brutalist-form textarea {
+.form input,
+.form textarea {
   border: 1px solid #000;
   padding: 12px;
-  font-family: var(--sans);
   background: transparent;
 }
 
@@ -82,4 +122,5 @@ hr {
   border: 0;
   border-top: 1px solid #000;
   margin: 60px 0;
+  width: 100%;
 }
