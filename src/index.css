@@ -1,46 +1,40 @@
 :root {
-  --text: #000000;
-  --text-h: #000000;
-  --bg: #ffffff;
-  --border: #e5e7eb;
-  --code-bg: #f9fafb;
-  --accent: #000000;
-  --accent-bg: rgba(0, 0, 0, 0.05);
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --text: #1a1a1a;
+  --bg: #f4f4f4; /* Raw paper color */
+  --border: #000000;
+  --accent: #2563eb; /* A clean blue instead of purple */
+  
+  --sans: system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', monospace;
 
-  --sans: 'Inter', system-ui, sans-serif;
-  --mono: ui-monospace, monospace;
-
-  font: 18px/1.6 var(--sans);
+  font: 16px/1.5 var(--sans);
   color: var(--text);
   background: var(--bg);
-  -webkit-font-smoothing: antialiased;
 }
 
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 #root {
-  width: 800px;
-  max-width: 100%;
-  margin: 0 auto;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  min-height: 100vh;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  background: #ffffff;
   padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-h1 {
-  font-size: 3rem;
-  letter-spacing: -0.04em;
-  margin: 20px 0;
+h1, h2, h3 {
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
 }
 
-.counter {
-  font-family: var(--mono);
-  font-weight: 700;
-  padding: 4px 12px;
-  background: var(--accent-bg);
-  border-radius: 4px;
-}
+h1 { font-size: 3rem; border-bottom: 2px solid #000; padding-bottom: 10px; }
